@@ -43,17 +43,6 @@
                             </td>
                             <td>
                                 <?php
-                                if ($pengelola['gambar_identitas'] == "None") {
-                                    echo "Belum upload gambar.";
-                                } else {
-                                ?>
-                                    <a href="<?= base_url() ?>assets/img/identitas/kartu_identitas/<?= $pengelola['gambar_identitas'] ?>" target="_blank">Gambar</a>
-                                <?php
-                                }
-                                ?>
-                            </td>
-                            <td>
-                                <?php
                                 if ($pengelola['kyc_identitas'] == "None") {
                                     echo "Belum upload gambar.";
                                 } else {

@@ -109,10 +109,10 @@ class Auth extends CI_Controller
 			$this->session->set_userdata('username', $row->username);
 			$this->session->set_userdata('status', $row->status_user);
 			$this->session->set_userdata('level', $row->level);
-			if ($this->session->userdata('level') == "admin") {
+			if ($this->session->userdata('level') == "1") {
 				redirect('admin');
 				// TODO FITUR VERIFIKASI (FIX !=)
-			} elseif ($this->session->userdata('level') != "user" and $this->session->userdata('status') == "Tidak Aktif") {
+			} elseif ($this->session->userdata('level') != "0" and $this->session->userdata('status') == "Tidak Aktif") {
 				$this->session->sess_destroy();
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
             Sorry, your account isn"t activated. Please Contact Admin.
